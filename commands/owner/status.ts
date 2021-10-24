@@ -25,7 +25,7 @@ export default {
   
   init: (client: Client) => {
 
-    const status = "Prefix: s! Watching The World Burn!"
+    const status = "The World Burn!"
     setStatus(client, status)
   },
   
