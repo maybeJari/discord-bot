@@ -21,6 +21,8 @@ export default {
   minArgs: 1,
   expectedArgs: '<status>',
 
+  slash: false,
+  testOnly: false,
   ownerOnly: true,
   
   init: (client: Client) => {
