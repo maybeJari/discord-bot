@@ -1,7 +1,6 @@
 import DiscordJS, { Intents, Interaction } from 'discord.js'
 import WOKCommands from 'wokcommands'
 import path from 'path'
-import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 dotenv.config()
 
@@ -22,13 +21,40 @@ client.on('ready', async () => {
         typeScript: true,
         testServers: ['901819589455904809'],
         botOwners: ['817275612430336022'],
+        disabledDefaultCommands: [
+        'language',
+        ],
         mongoUri: process.env.DB,
         // dbOptions: {
         //     keepAlive: true
         // }
+        debug: true,
         
     })
-    .setDefaultPrefix('s!')
-    })
+        .setDefaultPrefix('h!')
+    
+        .setCategorySettings([
+        {
+            name: 'Moderation',
+            emoji: '🔧',
+        },
+        {
+            name: 'Utility',
+            emoji: '🚧',
+        },
+        {
+            name: 'Info',
+            emoji: '📔',
+        },
+        {
+            name: 'Developer',
+            emoji: '🖥️',
+        }
+    ])
+    
+    wok.on('databaseConnected', (connection: any, state: any) => {
+        console.log(`Database connection state is "${state}"`)
+    })       
+})
 
 client.login(process.env.TOKEN)

@@ -1,7 +1,7 @@
 import { ICommand } from "wokcommands";
 
 export default {
-    category: 'moderation',
+    category: 'Moderation',
     description: 'Deletes multiple messages at once.',
     aliases: ['purge', 'nuke', 'remove'],
 

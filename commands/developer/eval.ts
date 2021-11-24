@@ -2,7 +2,7 @@ import { ICommand } from "wokcommands";
 const { MessageEmbed } = require("discord.js");
 
 export default {
-    category: 'Owner',
+    category: 'Developer',
     description: 'Eval',
 
     slash: 'both',

@@ -15,7 +15,7 @@ const setStatus = (client: Client, status: string) => {
 
 export default {
 
-  category: 'Configuration',
+  category: 'Developer',
   description: 'Updates the status for the bot',
   
   minArgs: 1,

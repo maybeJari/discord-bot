@@ -1,12 +1,12 @@
 import { ICommand } from "wokcommands";
 
 export default {
-    category: 'Testing',
+    category: 'Developer',
     description: 'Replies with pong',
 
     slash: 'both',
     testOnly: false,
-    ownerOnly: false,
+    ownerOnly: true,
 
     callback: ({ message, interaction }) => {
         if(message) {
