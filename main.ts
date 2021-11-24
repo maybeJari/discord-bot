@@ -5,6 +5,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 const status = require('./features/status.ts')
+const guildslog = require('./features/guildslog.ts')
 
 const client = new DiscordJS.Client({
     intents: [
@@ -19,6 +20,7 @@ const client = new DiscordJS.Client({
 client.on('ready', async () => {
 
         status(client)
+        guildslog(client)
 
     const wok = new WOKCommands(client, {
         commandsDir: path.join(__dirname, 'commands'),
