@@ -4,6 +4,8 @@ import path from 'path'
 import dotenv from 'dotenv'
 dotenv.config()
 
+const status = require('./features/status.ts')
+
 const client = new DiscordJS.Client({
     intents: [
         Intents.FLAGS.GUILDS,
@@ -15,6 +17,8 @@ const client = new DiscordJS.Client({
 })
 
 client.on('ready', async () => {
+
+        status(client)
 
     const wok = new WOKCommands(client, {
         commandsDir: path.join(__dirname, 'commands'),
