@@ -9,8 +9,8 @@ module.exports = async (client: { guilds: { cache: { forEach: (arg0: (guild: { m
 	    });
 
         const arrayOfStatus = [
-            `over ${client.guilds.cache.size} servers!`,
-            `over ${count} users!`,
+            `over ${client.guilds.cache.size} ponds!`,
+            `over ${count} geese!`,
             `default Prefix is: 'h!'`,
         ];
         
