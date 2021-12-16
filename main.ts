@@ -30,6 +30,9 @@ client.on('ready', async () => {
         disabledDefaultCommands: [
         'language',
         ],
+        ignoreBots: true,
+        showWarns: true,
+        delErrMsgCooldown: -1,
         mongoUri: process.env.DB,
         // dbOptions: {
         //     keepAlive: true
